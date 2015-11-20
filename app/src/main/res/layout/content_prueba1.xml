@@ -8,13 +8,14 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_prueba1" tools:context="com.example.nuni.ldh1.prueba1"
-    android:id="@+id/prueba1">
+    android:id="@+id/i2">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="hola mundo"
-        android:id="@+id/hola"
+        android:id="@+id/textView2"
         android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
