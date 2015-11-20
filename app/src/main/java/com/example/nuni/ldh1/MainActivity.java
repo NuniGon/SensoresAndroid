@@ -14,12 +14,26 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import java.util.List;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MainActivity.
+ */
 public class MainActivity extends AppCompatActivity implements SensorEventListener{
 
+    /** The texto. */
     TextView texto;
+
+    /** The sensor manager. */
     SensorManager sensorManager;
+
+    /** The accelerometer. */
     private Sensor accelerometer;
 
+    /**
+     * On create.
+     *
+     * @param savedInstanceState the saved instance state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +64,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     }
 
+    /**
+     * On create options menu.
+     *
+     * @param menu the menu
+     * @return true, if successful
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -57,6 +77,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         return true;
     }
 
+    /**
+     * On options item selected.
+     *
+     * @param item the item
+     * @return true, if successful
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -72,6 +98,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * On sensor changed.
+     *
+     * @param event the event
+     */
     @Override
     public void onSensorChanged(SensorEvent event) {
         float x,y, z;
@@ -84,17 +115,29 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     }
 
+    /**
+     * On accuracy changed.
+     *
+     * @param sensor the sensor
+     * @param accuracy the accuracy
+     */
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
 
+    /**
+     * On resume.
+     */
     @Override
     protected void onResume() {
         super.onResume();
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
+    /**
+     * On pause.
+     */
     @Override
     protected void onPause() {
         super.onPause();
