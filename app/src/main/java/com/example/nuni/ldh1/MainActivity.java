@@ -14,6 +14,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+// TODO: Auto-generated Javadoc
+>>>>>>> Desarrollo
 /**
  * The Class MainActivity.
  */
@@ -143,4 +147,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sensorManager.unregisterListener(this);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Desarrollo
