@@ -18,15 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Acelerometro"
             android:label="@string/title_activity_acelerometro"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Podometro" />
-        <activity
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+
+        <activity android:name=".Podometro"
+            android:label="@string/title_activity_giroscopio"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+         <activity
             android:name=".Giroscopio"
             android:label="@string/title_activity_giroscopio"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+         </activity>
+
     </application>
 
 </manifest>
