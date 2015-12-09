@@ -1,4 +1,4 @@
-package com.example.nuni.ldh11;
+package com.example.nuni;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
