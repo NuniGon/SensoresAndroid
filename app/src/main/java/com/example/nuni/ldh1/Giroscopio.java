@@ -1,4 +1,4 @@
-package com.example.nuni;
+package com.example.nuni.ldh1;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -14,9 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.nuni.ldh11.R;
+import com.example.nuni.ldh1.R;
 
-public  class Acelerometro extends AppCompatActivity implements SensorEventListener {
+public  class Giroscopio extends AppCompatActivity implements SensorEventListener {
     /** The texto. */
     TextView texto;
 
@@ -24,8 +24,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     SensorManager sensorManager;
 
     /** The accelerometer. */
-    private Sensor accelerometer;
-
+    private Sensor giroscopio;
     /**
      * On create.
      *
@@ -50,7 +49,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         texto = (TextView)findViewById(R.id.texto);
 
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        giroscopio = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
             /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
 
@@ -103,7 +102,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         z = event.values[2];
 
         texto.setText(" Acelerometro");
-        texto.append("\n" + " Valor de X: " + x +" m/s "+ "\n" + " Valor de Y: " + y +" m/s "+  "\n" + " Valor de Z: " + z + " m/s ");
+        texto.append("\n" + " Valor de X: " + x + "\n" + " Valor de Y: " + y +  "\n" + " Valor de Z: " + z );
 
 
     }
@@ -125,7 +124,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     @Override
     protected void onResume() {
         super.onResume();
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, giroscopio, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     /**
@@ -136,5 +135,6 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         super.onPause();
         sensorManager.unregisterListener(this);
     }
+
 
 }

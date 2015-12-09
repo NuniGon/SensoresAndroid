@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/nuni/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0_fde3c0b87f6fbf6cd93db94a37b1a294aa0463f2.jar" />
+    </item>
+    <item
+        jar="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.0_34013b78b74bd72866eb1b9a1e429916573479e9.jar" />
+    </item>
+    <item
+        jar="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0_b9802fef2e94e4991d0216029af94a70e0344b7a.jar" />
+    </item>
+    <item
+        jar="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.0_393189008d69d773604d91f7aaf766e4207eae99.jar" />
+    </item>
+    <item
+        jar="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.0_b4740512e1868b45d34c516108412664d7b81b16.jar" />
+    </item>
+    <item
+        jar="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.0_d9f7c4647688c8693f2ee59da0ff00c375440d3b.jar" />
+    </item>
+
+</items>
