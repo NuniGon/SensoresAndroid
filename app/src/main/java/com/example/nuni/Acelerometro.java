@@ -1,25 +1,22 @@
-package com.example.nuni.ldh1;
+package com.example.nuni;
+
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
-import java.util.List;
 
+import com.example.nuni.ldh11.R;
 
-/**
- * The Class MainActivity.
- */
-public class MainActivity extends AppCompatActivity implements SensorEventListener{
-
+public class Acelerometro extends AppCompatActivity implements SensorEventListener {
     /** The texto. */
     TextView texto;
 
@@ -55,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-
         /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
 
         for (int i=1 ; i<mList.size() ; i++)
@@ -72,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -85,9 +80,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -105,13 +97,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float x,y, z;
+        float x,y,z, m,n,o;
         x = event.values[0];
         y = event.values[1];
         z = event.values[2];
 
-        texto.setText("");
-        texto.append("\n" + " Valor de X: " + x + "\n" + " Valor de Y: " + y + "\n" + " Valor de Z: " + z);
+        texto.setText(" Acelerometro");
+        texto.append("\n" + " Valor de X: " + x +" m/s "+ "\n" + " Valor de Y: " + y +" m/s "+  "\n" + " Valor de Z: " + z + " m/s ");
+
 
     }
 
@@ -144,6 +137,4 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         sensorManager.unregisterListener(this);
     }
 
-
 }
-
