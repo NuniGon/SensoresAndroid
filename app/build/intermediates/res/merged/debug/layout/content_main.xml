@@ -12,8 +12,44 @@
     tools:context="com.example.nuni.ldh1.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <TextView android:text="Inicio de Aplicación" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/textView" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/textView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acelerómetro"
+                android:id="@+id/button"
+                android:layout_column="5"
+                android:contextClickable="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giroscopio"
+                android:id="@+id/button2"
+                android:layout_column="12" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Podómetro"
+                android:id="@+id/button3"
+                android:layout_column="12" />
+
+        </TableRow>
+    </TableLayout>
+
 </RelativeLayout>
