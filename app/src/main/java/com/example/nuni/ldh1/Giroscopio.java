@@ -51,12 +51,6 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         giroscopio = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
-            /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
-
-            for (int i=1 ; i<mList.size() ; i++)
-                texto.append("\n" +mList.get(i).getName()+ "\n" +mList.get(i).getVendor()+ "\n" +mList.get(i).getVersion());
-            */
-
     }
 
     /**
@@ -101,7 +95,7 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
         y = event.values[1];
         z = event.values[2];
 
-        texto.setText(" Acelerometro");
+        texto.setText(" Giroscopio");
         texto.append("\n" + " Valor de X: " + x + "\n" + " Valor de Y: " + y +  "\n" + " Valor de Z: " + z );
 
 
