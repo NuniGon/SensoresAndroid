@@ -12,6 +12,12 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.widget.Button;
 
+/**
+ * @author SAMUEL RAFAEL DONIZ DOMINGUEZ
+ * @author MIGUEL AURELIO GARCÍA GONZÁLEZ
+ * @author HECTOR JOSE RAVELO GARCIA
+ * @author NURIA GONZALO SOTO
+ */
 
 /**
  * @class MainActivity
@@ -30,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
      * @button botonAcelerometro
      * @button botonGiroscopio
      * @button botonPodometro
-     * @boton botonBarometro
+     * @button botonBarometro
      */
     Button botonAcelerometro;
     Button botonGiroscopio;
@@ -42,19 +48,19 @@ public class MainActivity extends AppCompatActivity {
      * @button botonAcelerometro
      * @button botonGiroscopio
      * @button botonPodometro
-     * @boton botonBarometro
      */
+
 
     /**
      * Grupo 3
      *
-     * @button botonAcelerometro
-     * @button botonGiroscopio
-     * @button botonPodometro
-     * @boton botonBarometro
+     * @button botonHumedad
+     * @button botonProximidad
+     * @button botonMagnometro
      */
-
-
+    Button botonHumedad;
+    Button botonProximidad;
+    Button botonMagnometro;
 
 
     @Override
@@ -72,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        /**
+         * @author GRUPO1
+         */
 
         /**
          * Se declara boton para el sensor ACELEROMETRO
@@ -107,6 +117,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        /**
+         * @author Grupo3
+         */
+        /**
+         * Se declara boton para el sensor HUMEDAD
+         */
+        botonHumedad = (Button) findViewById(R.id.button5);
+        botonHumedad.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                humedad(v);
+            }
+        });
+
+        /**
+         * Se declara boton para el sensor PROXIMIDAD
+         */
+        /*botonProximidad = (Button) findViewById(R.id.button5);
+        botonProximidad.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                proximidad(v);
+            }
+        });*/
+
+        /**
+         * Se declara boton para el sensor MAGNOMETRO
+         */
+    /*    botonMagnometro = (Button) findViewById(R.id.button6);
+        botonMagnometro.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                acelometer(v);
+            }
+        });*/
+
+
     }
 
       /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
@@ -118,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Añade elementos a la barra de acción si está presente
+     *
      * @param menu
      * @return true
      */
@@ -130,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Coge el id , comprueba si está en los ajustes, si está return true, si no, retorna el item seleccionado en las opciones
+     *
      * @param item
      * @return
      */
@@ -148,6 +198,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    /**
+     * Grupo1
+     */
 
     /**
      * Función que crea el intent con la actividad del sensor acelerometro y la inicia.
@@ -169,7 +223,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-
     /**
      * Función que crea el intent con la actividad del sensor podometro y la inicia.
      *
@@ -179,4 +232,38 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, Podometro.class);
         startActivity(i);
     }
+
+
+    /**
+     * Grupo 3
+     */
+    /**
+     * Función que crea el intent con la actividad del sensor humedad y la inicia.
+     *
+     * @param view
+     */
+    public void humedad(View view) {
+        Intent i = new Intent(this, Humedad.class);
+        startActivity(i);
+    }
+
+    /**
+     * Función que crea el intent con la actividad del sensor proximidad y la inicia.
+     *
+     * @param view
+     */
+  /*  public void proximidad(View view) {
+        Intent i = new Intent(this, Proximidad.class);
+        startActivity(i);
+    }*/
+
+    /**
+     * Función que crea el intent con la actividad del sensor magnometro y la inicia.
+     *
+     * @param view
+     */
+  /*  public void magnometro(View view) {
+        Intent i = new Intent(this, Magnometro.class);
+
+    }*/
 }
