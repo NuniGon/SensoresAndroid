@@ -90,7 +90,7 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float x,y,z, m,n,o;
+        float x,y,z;
         x = event.values[0];
         y = event.values[1];
         z = event.values[2];
@@ -108,9 +108,7 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
      * @param accuracy the accuracy
      */
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-    }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 
     /**
      * On resume.
