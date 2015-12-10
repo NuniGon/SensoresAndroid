@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 
 public class Podometro extends AppCompatActivity implements SensorEventListener {
+
     //Función principal con el codigo del sensor (Podometro).
     //declaracion de las variables ha emplear usando la biblioteca de Sensores
     private TextView textView;
@@ -28,7 +29,7 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         //Llamada a las funciones que vienen implementadas dentro de la clase SensorManager
         //Permite la obtencion de los distintos valores del sensor
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_podometro);
         textView = (TextView) findViewById(R.id.texto);
 
         mSensorManager = (SensorManager)

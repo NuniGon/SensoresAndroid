@@ -23,7 +23,7 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
     /** The sensor manager. */
     SensorManager sensorManager;
 
-    /** The accelerometer. */
+    /** The giroscopio. */
     private Sensor giroscopio;
     /**
      * On create.
@@ -33,7 +33,7 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_giroscopio);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

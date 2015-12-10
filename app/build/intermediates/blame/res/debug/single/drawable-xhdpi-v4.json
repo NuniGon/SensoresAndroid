@@ -20,12 +20,12 @@
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
-        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png",
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png",
+        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
@@ -56,12 +56,12 @@
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
-        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png",
+        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png",
@@ -124,12 +124,12 @@
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
-        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png",
@@ -152,12 +152,12 @@
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png",
-        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_ic_go_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
         "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/nuni/AndroidStudioProjects/LDH1/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
