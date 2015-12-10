@@ -16,6 +16,9 @@ import android.widget.TextView;
 
 import com.example.nuni.ldh1.R;
 
+/**
+ * @class  Giroscopio
+ */
 public  class Giroscopio extends AppCompatActivity implements SensorEventListener {
     /** The texto. */
     TextView texto;

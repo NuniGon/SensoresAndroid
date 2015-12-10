@@ -13,11 +13,48 @@ import android.content.Intent;
 import android.widget.Button;
 
 
+/**
+ * @class MainActivity
+ */
+
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Creación de los botones en la interfaz principal
+     *
+     */
+
+    /**
+     * Grupo 1
+     *
+     * @button botonAcelerometro
+     * @button botonGiroscopio
+     * @button botonPodometro
+     * @boton botonBarometro
+     */
     Button botonAcelerometro;
     Button botonGiroscopio;
     Button botonPodometro;
+
+    /**
+     * Grupo 2
+     *
+     * @button botonAcelerometro
+     * @button botonGiroscopio
+     * @button botonPodometro
+     * @boton botonBarometro
+     */
+
+    /**
+     * Grupo 3
+     *
+     * @button botonAcelerometro
+     * @button botonGiroscopio
+     * @button botonPodometro
+     * @boton botonBarometro
+     */
+
+
 
 
     @Override
@@ -72,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+      /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
+
+            for (int i=1 ; i<mList.size() ; i++)
+                texto.append("\n" +mList.get(i).getName()+ "\n" +mList.get(i).getVendor()+ "\n" +mList.get(i).getVersion());
+      */
+
+
     /**
      * Añade elementos a la barra de acción si está presente
      * @param menu
@@ -106,8 +150,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Función que crea el intent con la actividad del sensor proximidad y la inicia.
-     * Se espera modificar cambios (Probando commits con jira...)
+     * Función que crea el intent con la actividad del sensor acelerometro y la inicia.
+     *
      * @param view
      */
     public void acelometer(View view) {
@@ -116,7 +160,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Función que crea el intent con la actividad del sensor magnometro y la inicia.
+     * Función que crea el intent con la actividad del sensor giroscopio y la inicia.
+     *
      * @param view
      */
     public void giroscopio(View view) {
@@ -124,6 +169,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
+    /**
+     * Función que crea el intent con la actividad del sensor podometro y la inicia.
+     *
+     * @param view
+     */
     public void podometro(View view) {
         Intent i = new Intent(this, Podometro.class);
         startActivity(i);

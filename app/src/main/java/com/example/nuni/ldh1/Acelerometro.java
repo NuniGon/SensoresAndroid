@@ -15,6 +15,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
+/**
+ * @class  Acelerometro
+ */
+
 public  class Acelerometro extends AppCompatActivity implements SensorEventListener {
     /** The texto. */
     TextView texto;
@@ -50,12 +54,6 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
 
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-
-            /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
-
-            for (int i=1 ; i<mList.size() ; i++)
-                texto.append("\n" +mList.get(i).getName()+ "\n" +mList.get(i).getVendor()+ "\n" +mList.get(i).getVersion());
-            */
 
     }
 
@@ -96,12 +94,22 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
      */
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float x,y,z, m,n,o;
+        float x,y,z;
+
+        /**
+         * Valores de los ejes X,Y,Z.
+         *
+         * @variable values esta por defecto dentro de la librería de los sensores.
+         */
         x = event.values[0];
         y = event.values[1];
         z = event.values[2];
 
         texto.setText(" Acelerometro");
+
+        /**
+         * @variable texto muestra los valores de los tres ejes en metros/segundos.
+         */
         texto.append("\n" + " Valor de X: " + x +" m/s "+ "\n" + " Valor de Y: " + y +" m/s "+  "\n" + " Valor de Z: " + z + " m/s ");
 
 
@@ -114,12 +122,10 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
      * @param accuracy the accuracy
      */
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-    }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) { }
 
     /**
-     * On resume.
+     * On resume. Registro del listener para conocer si se ha minimizado la actividad
      */
     @Override
     protected void onResume() {
@@ -128,7 +134,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     }
 
     /**
-     * On pause.
+     * On pause.Para no sobrecargar la batería y parar la actividad cuando se salga de ella.
      */
     @Override
     protected void onPause() {

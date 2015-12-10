@@ -13,33 +13,48 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
-
+/**
+ * @class  Podometro
+ */
 public class Podometro extends AppCompatActivity implements SensorEventListener {
 
-    //Función principal con el codigo del sensor (Podometro).
-    //declaracion de las variables ha emplear usando la biblioteca de Sensores
+    /**
+     * Función principal con el codigo del sensor (Podometro).
+     *
+     * declaracion de las variables ha emplear usando la biblioteca de Sensores
+      */
     private TextView textView;
     private SensorManager mSensorManager;
     private Sensor mStepCounterSensor;
     private Sensor mStepDetectorSensor;
 
+
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Se llama en la creación de la actividad
-        //Llamada a las funciones que vienen implementadas dentro de la clase SensorManager
-        //Permite la obtencion de los distintos valores del sensor
+        /**
+         * Se llama en la creación de la actividad
+         * Llamada a las funciones que vienen implementadas dentro de la clase SensorManager
+         * Permite la obtencion de los distintos valores del sensor
+         */
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_podometro);
         textView = (TextView) findViewById(R.id.texto);
 
-        mSensorManager = (SensorManager)
-                getSystemService(Context.SENSOR_SERVICE);
-        mStepCounterSensor = mSensorManager
-                .getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        mStepDetectorSensor = mSensorManager
-                .getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
+        mSensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
+        mStepCounterSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        mStepDetectorSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
     }
 
+    /**
+     *
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -47,6 +62,11 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         return true;
     }
 
+    /**
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -62,43 +82,64 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * onSensorChanged
+     * @param event
+     */
     @Override
     public void onSensorChanged(SensorEvent event) {
-        //Muestreo de los datos una vez se vaya modificando el valor
+        /**
+         * Muestreo de los datos una vez se vaya modificando el valor
+         */
         Sensor sensor = event.sensor;
         float[] values = event.values;
         int value = -1;
-        //los valores se almacenan en el vector values.
+
+        /**
+         * los valores se almacenan en el vector values.
+         */
         if (values.length > 0) {
             value = (int) values[0];
         }
 
         if (sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
             textView.setText("Número de pasos : " + value);
-        } else if (sensor.getType() == Sensor.TYPE_STEP_DETECTOR) {
-            // Prueba. Sólo permite el valor 1 para el paso dado
+        }
+        else if (sensor.getType() == Sensor.TYPE_STEP_DETECTOR) {
+            /**
+             * Prueba. Sólo permite el valor 1 para el paso dado
+             */
             textView.setText("Número de pasos : " + value);
         }
     }
 
+    /**
+     *
+     * @param sensor
+     * @param i
+     */
     @Override
-    public void onAccuracyChanged(Sensor sensor, int i) {
+    public void onAccuracyChanged(Sensor sensor, int i) {}
 
-    }
 
+    /**
+     * onResum
+     */
     @Override
     protected void onResume() {
-        //Se llama cuando la actividad va a comenzar a interactuar con el usuario
+        /**
+         * Se llama cuando la actividad va a comenzar a interactuar con el usuario
+         */
         super.onResume();
-        mSensorManager.registerListener(this, mStepCounterSensor,
-                SensorManager.SENSOR_DELAY_FASTEST);
-        mSensorManager.registerListener(this, mStepDetectorSensor,
-                SensorManager.SENSOR_DELAY_FASTEST);
-
+        mSensorManager.registerListener(this, mStepCounterSensor,SensorManager.SENSOR_DELAY_FASTEST);
+        mSensorManager.registerListener(this, mStepDetectorSensor,SensorManager.SENSOR_DELAY_FASTEST);
     }
+
     @Override
     protected void onStop() {
-        //La actividad ya no va a ser visible para el usuario.
+        /**
+         * La actividad ya no va a ser visible para el usuario.
+         */
         super.onStop();
         mSensorManager.unregisterListener(this, mStepCounterSensor);
         mSensorManager.unregisterListener(this, mStepDetectorSensor);
