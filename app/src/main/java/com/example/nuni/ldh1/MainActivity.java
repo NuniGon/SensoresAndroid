@@ -1,5 +1,9 @@
 package com.example.nuni.ldh1;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,6 +15,9 @@ import android.view.MenuItem;
 
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * @author SAMUEL RAFAEL DONIZ DOMINGUEZ
@@ -23,7 +30,7 @@ import android.widget.Button;
  * @class MainActivity
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     /**
      * Creación de los botones en la interfaz principal
@@ -63,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
     Button botonMagnometro;
 
 
+    /** The texto. */
+    TextView texto;
+    /** The sensor manager. */
+    SensorManager sensorManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +90,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        texto = (TextView)findViewById(R.id.texto);
+        sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+
+        //Muestra una lista de los sensores que tiene el dispositivo
+
+        List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
+        for (int i=1 ; i<mList.size() ; i++) {
+            texto.append("\n" + mList.get(i).getName() /*+ "\n" + mList.get(i).getVendor() + "\n" + mList.get(i).getVersion()*/);
+        }
 
         /**
          * @author GRUPO1
@@ -155,13 +178,9 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
 
+
+
     }
-
-      /*List<Sensor> mList = sensorManager.getSensorList(Sensor.TYPE_ALL);
-
-            for (int i=1 ; i<mList.size() ; i++)
-                texto.append("\n" +mList.get(i).getName()+ "\n" +mList.get(i).getVendor()+ "\n" +mList.get(i).getVersion());
-      */
 
 
     /**
