@@ -41,6 +41,18 @@
         <activity
             android:name=".Proximidad"
             android:label="@string/title_activity_proximidad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Termometro"
+            android:label="@string/title_activity_termometro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Luz"
+            android:label="@string/title_activity_luz"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Pulsometro"
+            android:label="@string/title_activity_pulsometro"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

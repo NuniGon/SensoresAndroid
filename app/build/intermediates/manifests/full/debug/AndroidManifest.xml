@@ -48,6 +48,10 @@
             android:name="com.example.nuni.ldh1.Proximidad"
             android:label="@string/title_activity_proximidad"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.nuni.ldh1.Termometro"
+            android:label="@string/title_activity_termometro"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
