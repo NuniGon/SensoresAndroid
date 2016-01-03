@@ -1,8 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = true
-[remote "origin"]
-	url = https://bitbucket.org/alu0100598155/repository-to-mirror
-	fetch = +refs/*:refs/*
-	mirror = true

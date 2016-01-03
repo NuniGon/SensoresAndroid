@@ -40,6 +40,14 @@
             android:name="com.example.nuni.ldh1.Humedad"
             android:label="@string/title_activity_humedad"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.nuni.ldh1.Magnometro"
+            android:label="@string/title_activity_magnometro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.nuni.ldh1.Proximidad"
+            android:label="@string/title_activity_proximidad"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

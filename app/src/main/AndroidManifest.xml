@@ -21,18 +21,26 @@
         <activity
             android:name=".Acelerometro"
             android:label="@string/title_activity_acelerometro"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Podometro"
             android:label="@string/title_activity_giroscopio"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Giroscopio"
             android:label="@string/title_activity_giroscopio"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Humedad"
             android:label="@string/title_activity_humedad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Magnometro"
+            android:label="@string/title_activity_magnometro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Proximidad"
+            android:label="@string/title_activity_proximidad"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

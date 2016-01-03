@@ -278,6 +278,8 @@
     <string name="title_activity_acelerometro">Acelerometro</string>
     <string name="title_activity_giroscopio">Giroscopio</string>
     <string name="title_activity_humedad">Humedad</string>
+    <string name="title_activity_magnometro">Magnometro</string>
+    <string name="title_activity_proximidad">Proximidad</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
