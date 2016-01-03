@@ -40,10 +40,11 @@ public class Humedad extends Activity implements SensorEventListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_humedad);
         fondo = (LinearLayout) findViewById(R.id.fondo);
-        texto = (TextView) findViewById(R.id.humidity);
+        texto = (TextView) findViewById(R.id.noSensor);
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensores = sensorM.getSensorList(Sensor.TYPE_RELATIVE_HUMIDITY);
+
         if (!sensores.isEmpty()){
             s = sensores.get(0);
             sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);

@@ -2,6 +2,7 @@ package com.example.nuni.ldh1;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import java.util.List;
 
 
 /**
@@ -24,9 +27,14 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
      * declaracion de las variables ha emplear usando la biblioteca de Sensores
       */
     private TextView textView;
-    private SensorManager mSensorManager;
+    private TextView texto;
+    private SensorManager sensorManager;
+
     private Sensor mStepCounterSensor;
     private Sensor mStepDetectorSensor;
+    private Sensor s;
+
+    List<Sensor> sensores;
 
 
     /**
@@ -44,10 +52,11 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_podometro);
         textView = (TextView) findViewById(R.id.texto);
+        texto = (TextView) findViewById(R.id.noSensor);
 
-        mSensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
-        mStepCounterSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        mStepDetectorSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
+        sensorManager = (SensorManager)getSystemService(Context.SENSOR_SERVICE);
+        mStepCounterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+        mStepDetectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
     }
 
     /**
@@ -131,8 +140,8 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
          * Se llama cuando la actividad va a comenzar a interactuar con el usuario
          */
         super.onResume();
-        mSensorManager.registerListener(this, mStepCounterSensor,SensorManager.SENSOR_DELAY_FASTEST);
-        mSensorManager.registerListener(this, mStepDetectorSensor,SensorManager.SENSOR_DELAY_FASTEST);
+        sensorManager.registerListener(this, mStepCounterSensor,SensorManager.SENSOR_DELAY_FASTEST);
+        sensorManager.registerListener(this, mStepDetectorSensor,SensorManager.SENSOR_DELAY_FASTEST);
     }
 
     @Override
@@ -141,8 +150,8 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
          * La actividad ya no va a ser visible para el usuario.
          */
         super.onStop();
-        mSensorManager.unregisterListener(this, mStepCounterSensor);
-        mSensorManager.unregisterListener(this, mStepDetectorSensor);
+        sensorManager.unregisterListener(this, mStepCounterSensor);
+        sensorManager.unregisterListener(this, mStepDetectorSensor);
     }
 
 
