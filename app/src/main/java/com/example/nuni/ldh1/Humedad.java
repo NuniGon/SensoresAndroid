@@ -19,10 +19,10 @@ import java.util.List;
 public class Humedad extends Activity implements SensorEventListener {
     LinearLayout fondo;
     TextView texto;
-    Sensor s;
+    Sensor sensor;
     SensorManager sensorM;
 
-    private final static String falloSensor = "Tu dispositivo no tiene el sensor: HUMEDAD.";
+    private final static String falloSensor = "Su dispositivo no tiene el sensor: HUMEDAD.";
 
     /**
      *       Primero se le especifica a la clase HumedadActivity que implemente el SensorEventListener, esto
@@ -44,10 +44,10 @@ public class Humedad extends Activity implements SensorEventListener {
         texto = (TextView) findViewById(R.id.noSensor);
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
-        sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);
+        sensorM.registerListener(this,sensor,sensorM.SENSOR_DELAY_UI);
 
         // Si no detectamos el sensor, mostramos el mensaje de fallo
-        if (s == null) {
+        if (sensor == null) {
             texto.setText(falloSensor);
         }
     }

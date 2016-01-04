@@ -20,7 +20,9 @@ public class Proximidad extends AppCompatActivity implements SensorEventListener
 
     LinearLayout fondo;
     TextView texto;
-    Sensor s;
+
+    /**Sensor de proximidad**/
+    Sensor sensor;
     SensorManager sensorM;
 
     private final static String falloSensor = "Su dispositivo no tiene el sensor : PROXIMIDAD.";
@@ -45,10 +47,10 @@ public class Proximidad extends AppCompatActivity implements SensorEventListener
         this.texto =(TextView) findViewById(R.id.proximidad);
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
-        sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);
+        sensorM.registerListener(this,sensor,sensorM.SENSOR_DELAY_UI);
 
         // Si no detectamos el sensor, mostramos el mensaje de fallo
-        if (s == null) {
+        if (sensor == null) {
            texto.setText(falloSensor);
         }
     }

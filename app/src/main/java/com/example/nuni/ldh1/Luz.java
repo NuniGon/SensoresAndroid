@@ -25,8 +25,10 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
 
     private TextView lightTxt;
     private SensorManager sensorManager;
-    private Sensor lightSensor;
-    private final static String sensorFail = "Tu dispositivo no tiene el sensor de luz";
+
+    /**Sensor de  luminosidad**/
+    private Sensor sensor;
+    private final static String sensorFail = "Su dispositivo no tiene el sensor: LUZ";
 
     /**
      * Método que se ejecuta al lanzar la actividad.
@@ -45,11 +47,11 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
 
         //se establece el SensorManager, el Sensor de luz y el observador
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        sensorManager.registerListener(this, lightSensor,SensorManager.SENSOR_DELAY_NORMAL);
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        sensorManager.registerListener(this, sensor,SensorManager.SENSOR_DELAY_NORMAL);
 
         //Si no se encuentra el sensor, se muestra un mensaje de error
-        if (lightSensor == null) {
+        if (sensor == null) {
             lightTxt.setText(sensorFail);
         }
     }

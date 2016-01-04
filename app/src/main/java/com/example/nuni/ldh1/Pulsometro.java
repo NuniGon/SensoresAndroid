@@ -21,7 +21,9 @@ public class Pulsometro extends AppCompatActivity {
 
     private TextView textoPulsaciones;
     private SensorManager mSensorManager;
-    private Sensor mHeartRate;
+
+    /**Sensor pulsómetro**/
+    private Sensor sensor;
     private final static String falloSensor = "Su dispositivo no tiene el sensor : PULSÓMETRO.";
 
     /**
@@ -42,10 +44,10 @@ public class Pulsometro extends AppCompatActivity {
 
         // Seleccionamos el sensor que lee las pulsaciones
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        mHeartRate= mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+        sensor= mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
 
         // Si no detectamos el sensor, mostramos el mensaje de fallo
-        if (mHeartRate == null) {
+        if (sensor == null) {
             textoPulsaciones.setText(falloSensor);
         }
     }

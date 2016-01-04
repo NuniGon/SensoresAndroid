@@ -25,7 +25,9 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
 
     private TextView textoTemperaturaC, textoTemperaturaK, textoTemperaturaF ;
     private SensorManager mSensorManager;
-    private Sensor mTemperature;
+
+    /**SEnsor de temperatura**/
+    private Sensor sensor;
     private final static String falloSensor = "Su dispositivo no tiene el sensor: TEMPERATURA.";
 
     /**
@@ -48,12 +50,12 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
         // Seleccionamos el sensor que lee la temperatura
 
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        mTemperature= mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
-        mSensorManager.registerListener(this, mTemperature,SensorManager.SENSOR_DELAY_NORMAL);
+        sensor= mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
+        mSensorManager.registerListener(this, sensor,SensorManager.SENSOR_DELAY_NORMAL);
 
         // Si no detectamos el sensor, mostramos el mensaje de fallo
 
-        if (mTemperature == null) {
+        if (sensor == null) {
             textoTemperaturaK.setText(falloSensor);
             textoTemperaturaK.setTextColor(Color.rgb(255, 0, 0));
         }

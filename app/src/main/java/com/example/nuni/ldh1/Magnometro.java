@@ -41,7 +41,6 @@ public class Magnometro extends AppCompatActivity implements SensorEventListener
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensores = sensorM.getSensorList(Sensor.TYPE_MAGNETIC_FIELD);
-
         if (!sensores.isEmpty()){
             s = sensores.get(0);
             sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);
@@ -63,7 +62,7 @@ public class Magnometro extends AppCompatActivity implements SensorEventListener
 
     @Override
     public void onSensorChanged(SensorEvent evento) {
-        this.magneticView.setText(String.format("Coordenada X: %f\nCoordenada Y: %f\nCoordenada Z %f", new Object[]{evento.values[0],evento.values[1],evento.values[2]}));
+        this.magneticView.setText(String.format("Coordenada X: %f\nCoordenada Y: %f\nCoordenada Z: %f", new Object[]{evento.values[0],evento.values[1],evento.values[2]}));
     }
 
 
