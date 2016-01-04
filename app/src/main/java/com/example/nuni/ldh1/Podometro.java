@@ -32,9 +32,6 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
 
     private Sensor mStepCounterSensor;
     private Sensor mStepDetectorSensor;
-    private Sensor s;
-
-    List<Sensor> sensores;
 
 
     /**

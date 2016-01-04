@@ -52,6 +52,14 @@
             android:name="com.example.nuni.ldh1.Termometro"
             android:label="@string/title_activity_termometro"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.nuni.ldh1.Luz"
+            android:label="@string/title_activity_luz"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.nuni.ldh1.Pulsometro"
+            android:label="@string/title_activity_pulsometro"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

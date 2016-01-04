@@ -27,7 +27,9 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     SensorManager sensorManager;
 
     /** The accelerometer. */
-    private Sensor accelerometer;
+    private Sensor sensor;
+
+    private final static String falloSensor = "Tu dispositivo no tiene el sensor: ACELERÓMETRO.";
 
     /**
      * On create.
@@ -44,7 +46,13 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         texto = (TextView)findViewById(R.id.texto);
 
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
+
+        // Si no detectamos el sensor, mostramos el mensaje de fallo
+        if (sensor == null) {
+            texto.setText(falloSensor);
+        }
 
     }
 
@@ -121,7 +129,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     @Override
     protected void onResume() {
         super.onResume();
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     /**

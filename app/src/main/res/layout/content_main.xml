@@ -25,16 +25,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:text="Tienes estos sensores..."
+            <ScrollView
                 android:layout_width="200dp"
                 android:layout_height="80dp"
-                android:id="@+id/texto"
+                android:id="@+id/scrollView2"
                 android:layout_above="@+id/button"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:text="Tienes estos sensores..."
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/texto"
+                    android:layout_above="@+id/button"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </ScrollView>
 
 
             <Button
@@ -89,7 +100,57 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />
 
+            <Button
+                android:layout_width="140dp"
+                android:layout_height="80dp"
+                android:text="Proximidad"
+                android:id="@+id/button6"
+                android:layout_column="18"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/button4"
+                android:layout_alignStart="@+id/button4" />
+
         </RelativeLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:text="Magnometro"
+        android:id="@+id/button7"
+        android:layout_column="18"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:text="Luz"
+        android:id="@+id/button8"
+        android:layout_column="18"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignRight="@+id/scrollView"
+        android:layout_alignEnd="@+id/scrollView" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:text="Termometro"
+        android:id="@+id/button9"
+        android:layout_column="18"
+        android:layout_below="@+id/button7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:text="Pulsometro"
+        android:id="@+id/button10"
+        android:layout_column="18"
+        android:layout_alignTop="@+id/button9"
+        android:layout_alignRight="@+id/scrollView"
+        android:layout_alignEnd="@+id/scrollView" />
 
 </RelativeLayout>
