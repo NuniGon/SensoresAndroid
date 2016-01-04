@@ -39,7 +39,7 @@ public class Humedad extends Activity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_humedad);
+        setContentView(R.layout.content_humedad);
         fondo = (LinearLayout) findViewById(R.id.fondo);
         texto = (TextView) findViewById(R.id.noSensor);
 

@@ -47,7 +47,7 @@ public class Podometro extends AppCompatActivity implements SensorEventListener 
          */
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_podometro);
+        setContentView(R.layout.content_podometro);
         textView = (TextView) findViewById(R.id.texto);
         texto = (TextView) findViewById(R.id.noSensor);
 

@@ -26,7 +26,7 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
     private TextView textoTemperaturaC, textoTemperaturaK, textoTemperaturaF ;
     private SensorManager mSensorManager;
     private Sensor mTemperature;
-    private final static String falloSensor = "Tu dispositivo no tiene el sensor de temperatura.";
+    private final static String falloSensor = "Su dispositivo no tiene el sensor: TEMPERATURA.";
 
     /**
      * Método que se ejecuta al lanzar la actividad.
@@ -37,7 +37,7 @@ public class Termometro extends AppCompatActivity implements SensorEventListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_termometro);
+        setContentView(R.layout.content_termometro);
 
         // Asignamos los textViews que declaramos en el fichero activity_main a los que declaramos
 

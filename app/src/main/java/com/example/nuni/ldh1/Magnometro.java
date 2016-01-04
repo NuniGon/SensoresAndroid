@@ -41,6 +41,7 @@ public class Magnometro extends AppCompatActivity implements SensorEventListener
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensores = sensorM.getSensorList(Sensor.TYPE_MAGNETIC_FIELD);
+
         if (!sensores.isEmpty()){
             s = sensores.get(0);
             sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);

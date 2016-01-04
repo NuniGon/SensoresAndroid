@@ -28,6 +28,10 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
 
     /** The giroscopio. */
     private Sensor giroscopio;
+
+    private final static String falloSensor = "Tu dispositivo no tiene el sensor: GIROSCÓPIO.";
+
+
     /**
      * On create.
      *
@@ -36,14 +40,17 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_giroscopio);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.content_giroscopio);
 
         texto = (TextView)findViewById(R.id.texto);
 
         sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         giroscopio = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+
+        // Si no detectamos el sensor, mostramos el mensaje de fallo
+        if (giroscopio == null) {
+            texto.setText(falloSensor);
+        }
 
     }
 
@@ -89,8 +96,7 @@ public  class Giroscopio extends AppCompatActivity implements SensorEventListene
         y = event.values[1];
         z = event.values[2];
 
-        texto.setText(" Giroscopio");
-        texto.append("\n" + " Valor de X: " + x + "\n" + " Valor de Y: " + y +  "\n" + " Valor de Z: " + z );
+        texto.setText("\n" + " Valor de X: " + x + "\n" + " Valor de Y: " + y +  "\n" + " Valor de Z: " + z );
 
 
     }

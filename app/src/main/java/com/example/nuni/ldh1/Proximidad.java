@@ -17,11 +17,13 @@ import android.widget.TextView;
 import java.util.List;
 
 public class Proximidad extends AppCompatActivity implements SensorEventListener {
+
     LinearLayout fondo;
     TextView texto;
     Sensor s;
     SensorManager sensorM;
-    List<Sensor> sensores;
+
+    private final static String falloSensor = "Su dispositivo no tiene el sensor : PROXIMIDAD.";
 
     /**
      *       Primero se le especifica a la clase ProximidadActivity que implemente el SensorEventListener, esto
@@ -43,15 +45,11 @@ public class Proximidad extends AppCompatActivity implements SensorEventListener
         this.texto =(TextView) findViewById(R.id.proximidad);
 
         sensorM = (SensorManager) getSystemService(SENSOR_SERVICE);
-        sensores = sensorM.getSensorList(Sensor.TYPE_PROXIMITY);
-        if (!sensores.isEmpty()){
-            s = sensores.get(0);
-            sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);
-        }
-        else
-        {
-            this.texto.setText("NO HAY SENSOR ACTIVO");
-            this.texto.setBackgroundColor(Color.rgb(255, 0, 0));
+        sensorM.registerListener(this,s,sensorM.SENSOR_DELAY_UI);
+
+        // Si no detectamos el sensor, mostramos el mensaje de fallo
+        if (s == null) {
+           texto.setText(falloSensor);
         }
     }
     /**

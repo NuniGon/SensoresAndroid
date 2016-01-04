@@ -22,7 +22,7 @@ public class Pulsometro extends AppCompatActivity {
     private TextView textoPulsaciones;
     private SensorManager mSensorManager;
     private Sensor mHeartRate;
-    private final static String falloSensor = "Tu dispositivo no tiene el sensor : PULSÓMETRO.";
+    private final static String falloSensor = "Su dispositivo no tiene el sensor : PULSÓMETRO.";
 
     /**
      * Método que se ejecuta al lanzar la actividad.

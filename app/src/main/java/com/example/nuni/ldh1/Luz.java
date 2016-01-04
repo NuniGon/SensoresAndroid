@@ -38,7 +38,7 @@ public class Luz extends AppCompatActivity implements SensorEventListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_luz);
+        setContentView(R.layout.content_luz);
 
         //se asigna el TextView que se declara en el activity_luz
         lightTxt = (TextView) findViewById(R.id.texto);

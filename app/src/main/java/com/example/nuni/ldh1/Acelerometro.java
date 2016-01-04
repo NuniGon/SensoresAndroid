@@ -39,9 +39,8 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acelerometro);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.content_acelerometro);
+
 
         texto = (TextView)findViewById(R.id.texto);
 
@@ -104,12 +103,10 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
         y = event.values[1];
         z = event.values[2];
 
-        texto.setText(" Acelerometro");
-
         /**
          * @variable texto muestra los valores de los tres ejes en metros/segundos.
          */
-        texto.append("\n" + " Valor de X: " + x +" m/s "+ "\n" + " Valor de Y: " + y +" m/s "+  "\n" + " Valor de Z: " + z + " m/s ");
+        texto.setText("\n" + " Valor de X: " + x +" m/s "+ "\n" + " Valor de Y: " + y +" m/s "+  "\n" + " Valor de Z: " + z + " m/s ");
 
 
     }
