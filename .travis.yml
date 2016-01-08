@@ -1,4 +1,6 @@
 language: java
 
+install: ./gradlew assemble --stacktrace
+
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
