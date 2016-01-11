@@ -21,7 +21,7 @@ import java.util.List;
 
 /**
  * @author SAMUEL RAFAEL DONIZ DOMINGUEZ
- * @author MIGUEL AURELIO GARCÍA GONZÁLEZ
+ * @author MIGUEL AURELIO GARCIA GONZALEZ
  * @author HECTOR JOSE RAVELO GARCIA
  * @author NURIA GONZALO SOTO
  */

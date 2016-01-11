@@ -29,6 +29,7 @@ public  class Acelerometro extends AppCompatActivity implements SensorEventListe
     /** The accelerometer. */
     private Sensor sensor;
 
+    //En caso de que el teléfono no diponga del sensor aparecerá este mensaje
     private final static String falloSensor = "Su dispositivo no tiene el sensor: ACELERÓMETRO.";
 
     /**
