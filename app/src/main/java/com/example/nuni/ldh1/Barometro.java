@@ -18,7 +18,7 @@ public class Barometro extends AppCompatActivity implements SensorEventListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.content_barometro);
 
         pressView = (TextView) findViewById(R.id.pressTxt);
 
