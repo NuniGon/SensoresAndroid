@@ -20,11 +20,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * @author SAMUEL RAFAEL DONIZ DOMINGUEZ
- * @author MIGUEL AURELIO GARCIA GONZALEZ
  * @author HECTOR JOSE RAVELO GARCIA
- * @author NURIA GONZALO SOTO
- * Ppdfisnvlnfsvfklnam vxk
  */
 
 /**
