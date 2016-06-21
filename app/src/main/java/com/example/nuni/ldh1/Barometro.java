@@ -5,8 +5,11 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.widget.TextView;
+
+import com.example.nuni.ldh1.R;
 
 /**
  * Created by Miguel_Garcia on 10/12/2015.

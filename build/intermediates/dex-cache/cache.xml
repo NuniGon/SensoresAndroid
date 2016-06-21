@@ -16,13 +16,6 @@
         <dex dex="C:\Users\Public\AndroidStudio\Grupo1\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.0_a9f70a693809322788b92c55160b8c420f4c7244.jar" />
     </item>
     <item
-        jar="C:\Users\Public\AndroidStudio\Grupo1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\Public\AndroidStudio\Grupo1\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_c4cf63d4eb383a8a83a05ce9e0589aeae0dc1c65.jar" />
-    </item>
-    <item
         jar="C:\Users\Public\SDK_androidStudio\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="false"
         revision="23.0.2"
@@ -42,6 +35,13 @@
         revision="23.0.2"
         sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
         <dex dex="C:\Users\Public\AndroidStudio\Grupo1\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.0_02506f2987ede7b33ba00c7a6de4338518cc4833.jar" />
+    </item>
+    <item
+        jar="C:\Users\Public\AndroidStudio\Grupo1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\Public\AndroidStudio\Grupo1\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_c4cf63d4eb383a8a83a05ce9e0589aeae0dc1c65.jar" />
     </item>
 
 </items>
